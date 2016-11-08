@@ -50,22 +50,26 @@ describe ('makePokeDancer', function() {
   });
 });
 
-// describe ('makeCatDancer', function() {
+describe ('makeCatDancer', function() {
 
-//   var catDancer, clock;
-//   var timeBetweenSteps = 100;
+  var catDancer, clock;
+  var timeBetweenSteps = 100;
 
-//   beforeEach(function() {
-//     clock = sinon.useFakeTimers();
-//     catDancer = new makeCatDancer(10, 20, timeBetweenSteps);
-//   });
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    catDancer = new makeCatDancer(10, 20, timeBetweenSteps);
+  });
 
-//   it('should animate', function() {
-//     sinon.spy(catDancer, 'animate');
-//     catDancer.step();
-//     expect(catDancer.$node.animate.called).to.be.true;
-//   });
+  // it('should animate', function() {
+  //   sinon.spy(catDancer, 'animate');
+  //   catDancer.step();
+  //   expect(catDancer.$node.animate.called).to.be.true;
+  // });
+
+  it('should have a jQuery $node object', function() {
+    expect(catDancer.$node).to.be.an.instanceof(jQuery);
+  });
 
 
 
-// });
+});
