@@ -5,6 +5,7 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url("./underwater.jpg");
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -26,7 +27,11 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .blinky{
-
+  background-image: url("./giphy.gif");
+  border: none;
+  height:180px;
+  width:200px; 
+  background-repeat: no-repeat;
 }
 
 .poke{
@@ -44,6 +49,6 @@ body, a:link, a:visited, a:active{
   height:300px;
   width:260px;
   background-repeat: no-repeat;
-  transform: rotate(47deg);
+  transform: rotate(0deg);
 }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

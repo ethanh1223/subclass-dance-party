@@ -2,11 +2,14 @@ $(document).ready(function() {
   window.dancers = [];
 
   $('.lineUp').on('click', function() {
+    
     var space = 10;
     for ( var i = 0; i < dancers.length; i++) { 
-      dancers[i].hidden = true;
-      dancers[i].offsetTop = space;
-      space += 10;
+      var lineUpStyle = {top: space, left: 100};
+      //dancers[i].hidden = true;
+      dancers[i].css(lineUpStyle);
+      // dancers[i].offsetTop = space;
+      space += 50;
     }
   });
 
@@ -31,13 +34,13 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-    window.dancers.push(dancer.$node[0]);
+    window.dancers.push(dancer.$node);
   });
 
   
