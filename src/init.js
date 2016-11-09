@@ -13,6 +13,34 @@ $(document).ready(function() {
     }
   });
 
+  $('.interact').on('click', function() {
+    var rando = Math.floor(Math.random() * dancers.length);
+    var chosen = dancers[rando];
+    var rando2 = Math.floor(Math.random() * dancers.length);
+    var chosen2 = dancers[rando2];
+    if (rando === rando2) {
+      rando2 = Math.floor(Math.random() * dancers.length);
+      chosen2 = dancers[rando2];
+    }
+    var chosenLoc = {top: 400, left: 400};
+    var chosenLoc2 = {top: 400, left: 600};
+    var interactStyle = {top: 0, left: 0};
+
+    for (var i = 0; i < dancers.length; i++) {
+      dancers[i].css(interactStyle);
+    }
+
+    chosen.css(chosenLoc);
+    chosen.css('animation', 'spin 4s linear infinite');
+    chosen[0].draggable = true;
+    chosen2.css(chosenLoc2);
+    chosen2.css('animation', 'spin 4s linear infinite');
+    chosen2[0].draggable = true;
+
+
+
+  });
+
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.

@@ -10,6 +10,7 @@ var makeCatDancer = function(top, left, timeBetweenSteps) {
   // $('.cat').mouseover(function() {
   //   $('.cat').css('height', auto);
   // });
+
 };
 
 makeCatDancer.prototype = Object.create(makeDancer.prototype);
